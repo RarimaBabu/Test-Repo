@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'init'
+    }
+
+  }
   stages {
     stage('Selecting cloud provider') {
       steps {
@@ -7,5 +12,10 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    Azure = 'Azure'
+    AWS = 'AWS'
+    Gcp = 'Gcp'
   }
 }
