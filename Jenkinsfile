@@ -4,7 +4,7 @@ pipeline {
     stage('Printing hello') {
       agent any
       steps {
-        sh 'echo hai'
+        sh 'mkdir test_directory'
       }
     }
 
